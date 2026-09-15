@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #eaf4f7;
+  font-family: Arial, sans-serif;
+}
+
+.destination-card {
+  width: min(100%, 430px);
+  overflow: hidden;
+  border: 1px solid #d7e8ed;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 0 22px 55px rgba(15, 76, 92, 0.14);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 70px rgba(15, 76, 92, 0.22);
+}
+
+.destination-image {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  background: #dbeafe;
+}
+
+.destination-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.55s ease;
+}
+
+.destination-card:hover .destination-image img {
+  transform: scale(1.08);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.1),
+    rgba(15, 23, 42, 0.62)
+  );
+}
+
+.destination-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #0e7490;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  width: 39px;
+  height: 39px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #475569;
+  cursor: pointer;
+  font-size: 22px;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.favorite-button:hover {
+  color: #ef4444;
+  transform: scale(1.12);
+}
+
+.destination-location {
+  position: absolute;
+  right: 18px;
+  bottom: 17px;
+  left: 18px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.destination-location span:first-child {
+  color: #67e8f9;
+  font-size: 18px;
+}
+
+.destination-content {
+  padding: 23px;
+}
+
+.destination-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.destination-type {
+  margin: 0 0 8px;
+  color: #0e7490;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.destination-heading h1 {
+  margin: 0;
+  color: #164e63;
+  font-size: 23px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: #ecfeff;
+}
+
+.rating span {
+  color: #f59e0b;
+  font-size: 13px;
+}
+
+.rating strong {
+  color: #155e75;
+  font-size: 12px;
+}
+
+.destination-description {
+  margin: 13px 0 17px;
+  color: #66818a;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.destination-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5f0f2;
+}
+
+.destination-details span {
+  padding: 7px 9px;
+  border-radius: 7px;
+  background: #f0fdfa;
+  color: #0e7490;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.destination-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 19px;
+}
+
+.trip-price small,
+.trip-price span {
+  color: #94a3b8;
+  font-size: 9px;
+}
+
+.trip-price small {
+  display: block;
+  margin-bottom: 5px;
+  letter-spacing: 0.8px;
+}
+
+.trip-price strong {
+  color: #164e63;
+  font-size: 24px;
+}
+
+.trip-price span {
+  margin-left: 3px;
+}
+
+.explore-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #0e7490;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.explore-button span {
+  font-size: 17px;
+  transition: transform 0.25s ease;
+}
+
+.explore-button:hover {
+  background: #155e75;
+  transform: translateY(-2px);
+}
+
+.explore-button:hover span {
+  transform: translateX(4px);
+}
